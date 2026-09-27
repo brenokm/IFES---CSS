@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetLand Furão</title>
+    <link rel="stylesheet" href="../styles/structure.css">
+
+</head>
+
+<style>
+    .image {
+        width: auto;
+        height: auto;
+        max-width: 300px;
+        max-height: 800px;
+        border-radius: 10px;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    main {
+        display: flex;
+        gap: 16px;
+        padding-top: 20px;
+        justify-content: space-between;
+    }
+
+    .apresentation {
+        display: flex;
+        flex-direction: column;
+        max-width: 700px;
+        gap: 15px;
+        justify-content: center;
+        height: 90vh;
+    }
+
+    .latim {
+        color: #ff9d00;
+        font-size: clamp(1rem, 1.5vw, 2rem);
+    }
+
+    .name {
+        color: #0A3C00;
+        font-size: clamp(2rem, 3vw, 4rem);
+    }
+
+    .caracteristicas {
+        background-color: #F3EFE4;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 0;
+    }
+
+    .container-card {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .card {
+        background-color: white;
+        height: 50px;
+        width: 400px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        padding: 0px 20px;
+    }
+
+    .sobre {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        padding: 40px 20px;
+    }
+
+    .alimentacao,
+    .cuidados,
+    .saude,
+    .guias,
+    .curiosidade {
+        width: 500px;
+        max-width: 100%;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #F3EFE4;
+    }
+
+    .alimentacao h1,
+    .cuidados h1,
+    .saude h1,
+    .guias h1,
+    .curiosidade h1 {
+        text-align: center;
+        color: #0A3C00;
+        margin-bottom: 15px;
+    }
+
+
+
+
+    @media (max-width: 768px) {
+
+        nav {
+            padding: 15px;
+        }
+
+        .options {
+            width: auto;
+            gap: 15px;
+        }
+
+        main {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .image {
+            max-width: 250px;
+        }
+
+        .apresentation {
+            max-width: 100%;
+            align-items: center;
+        }
+
+        .container-card {
+            padding: 0 20px;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            min-height: 50px;
+            padding: 15px;
+        }
+
+        .sobre {
+            padding: 30px 20px;
+            gap: 20px;
+        }
+
+        .alimentacao,
+        .cuidados,
+        .saude,
+        .guias,
+        .curiosidade {
+            width: 100%;
+        }
+
+        footer {
+            height: 50px;
+        }
+    }
+
+    @media (max-width: 480px) {
+
+        nav {
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .options {
+            width: 100%;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .menu {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        main {
+            padding: 25px 15px;
+        }
+
+        .image {
+            max-width: 200px;
+        }
+
+        .name {
+            font-size: 2rem;
+        }
+
+        .caracteristicas {
+            padding: 25px 15px;
+        }
+
+        .container-card {
+            padding: 0;
+        }
+
+        .card {
+            width: 100%;
+        }
+
+        .sobre {
+            padding: 25px 15px;
+        }
+
+        .alimentacao,
+        .cuidados,
+        .saude,
+        .guias,
+        .curiosidade {
+            padding: 15px;
+        }
+    }
+</style>
+
+<body>
+
+    <nav>
+        <a href="../Index.html">
+            <div>
+                <figure>
+                    <img src="../img/logo.png" alt="Logo Pet-Love" class="logo">
+                </figure>
+            </div>
+        </a>
+
+        <div class="options">
+
+            <li class="drop">
+                <a id="optionE" href="#exotico">Animais Exóticos</a>
+
+                <div class="menu">
+                    <a href="cobra.html">Cobra-do-milho</a>
+                    <a href="iguana.html">Iguana</a>
+                    <a href="coruja.html">Coruja</a>
+                    <a href="arara.html">Arara</a>
+                    <a href="furao.html">Furão</a>
+                </div>
+            </li>
+
+            <li class="drop">
+                <a id="optionD" href="#domestico">Animais Domésticos</a>
+
+                <div class="menu">
+                    <a href="gato.html">Gatos</a>
+                    <a href="cachorro.html">Cachorros</a>
+                    <a href="peixe.html">Peixe</a>
+                    <a href="passaro.html">Passaro</a>
+                    <a href="coelho.html">Coelho</a>
+                </div>
+            </li>
+
+        </div>
+    </nav>
+
+
+    <main class="container">
+
+        <figure>
+            <img class="image" src="../img/furao.png" alt="FURÃO">
+        </figure>
+
+        <div class="apresentation">
+
+            <h3 class="latim">Mustela putorius furo</h3>
+
+            <h1 class="name">Furão</h1>
+
+            <p>
+                O furão é um pequeno mamífero conhecido pelo corpo alongado,
+                grande curiosidade e comportamento brincalhão. É um animal
+                ágil, ativo e bastante explorador.
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <section class="caracteristicas">
+
+        <center>
+            <h1>CARACTERÍSTICAS</h1>
+        </center>
+
+        <div class="container-card container">
+
+            <div class="card">
+                <p>
+                    <strong>Tamanho:</strong> Cerca de 35 a 50 cm.
+                </p>
+            </div>
+
+            <div class="card">
+                <p>
+                    <strong>Pelagem:</strong> Curta e pode apresentar várias cores.
+                </p>
+            </div>
+
+            <div class="card">
+                <p>
+                    <strong>Corpo:</strong> Alongado e bastante flexível.
+                </p>
+            </div>
+
+            <div class="card">
+                <p>
+                    <strong>Alimentação:</strong> Carnívora e rica em proteínas.
+                </p>
+            </div>
+
+            <div class="card">
+                <p>
+                    <strong>Comportamento:</strong> Curioso, ativo e brincalhão.
+                </p>
+            </div>
+
+            <div class="card">
+                <p>
+                    <strong>Hábitos:</strong> Dorme bastante e é ativo em vários períodos.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section>
+        <div class="container">
+
+            <div class=" sobre">
+                <div class="alimentacao">
+
+                    <h1>ALIMENTAÇÃO</h1>
+
+                    <div>
+                        <p>
+                            O furão é um animal carnívoro e precisa de uma alimentação
+                            rica em proteínas e gorduras de origem animal, adequada às
+                            suas necessidades nutricionais.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="cuidados">
+
+                    <h1>COMO CUIDAR</h1>
+
+                    <div>
+                        <p>
+                            Precisa de um ambiente seguro, espaço para brincar,
+                            esconderijos, água limpa e atividades que estimulem
+                            sua curiosidade e movimentação.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="saude">
+
+                    <h1>DICAS DE SAÚDE E NUTRIÇÃO</h1>
+
+                    <div>
+                        <p>
+                            É importante oferecer alimentação adequada, manter o
+                            ambiente limpo e realizar acompanhamento veterinário
+                            regularmente para prevenir problemas de saúde.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="guias">
+
+                    <h1>GUIAS DE RAÇAS E ESPÉCIES</h1>
+
+                    <div>
+                        <p>
+                            O furão doméstico pertence à espécie Mustela putorius furo
+                            e apresenta diferentes padrões de pelagem, como sable,
+                            albino e outras variações.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="curiosidade">
+
+                    <h1>CURIOSIDADES</h1>
+
+                    <div>
+                        <p>
+                            Furões conseguem passar por espaços pequenos graças ao
+                            seu corpo alongado. Também são conhecidos por esconder
+                            objetos e explorar diferentes ambientes.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>
